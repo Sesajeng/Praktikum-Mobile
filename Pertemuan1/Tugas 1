@@ -7,8 +7,8 @@ void main(){
   double saldo = 0.0;
   print("Saldo awal: Rp${saldo.toStringAsFixed(0)}");
 
-  // Menambahkan transaksi dengan nilai Rp 50.000
-  saldo += tambahTransaksi(170000.0); // Menambah penghasilan Rp 50.000
+  // Menambahkan transaksi dengan nilai Rp 170.000
+  saldo += tambahTransaksi(170000.0); // Menambah penghasilan Rp 170.000
   saldo -= kurangiTransaksi(50000.0); // Mengurangi pengeluaran Rp 50.000
 
   // Menampilkan saldo setelah transaksi
