@@ -1,0 +1,46 @@
+import 'dart:math';
+
+void main() async {
+  print("Selamat datang di Aplikasi Pencatatan Keuangan Pribadi!");
+
+  // Menampilkan saldo awal
+  double saldo = 0.0;
+  print("Saldo awal: Rp${saldo.toStringAsFixed(0)}");
+
+  // Menambahkan transaksi dengan nilai Rp 50.000
+  saldo += tambahTransaksi(170000.0); // Menambah penghasilan Rp 50.000
+  saldo -= kurangiTransaksi(50000.0); // Mengurangi pengeluaran Rp 50.000
+
+  // Menampilkan saldo setelah transaksi
+  print("Saldo setelah transaksi: Rp${saldo.toStringAsFixed(0)}");
+
+  // Melakukan operasi dengan error handling
+  try {
+    int hasilBagi = bagi(10, 0);
+    print("Hasil bagi: $hasilBagi");
+  } catch (e) {
+    print("Terjadi kesalahan: $e");
+  }
+
+  // Menampilkan angka acak
+  int angkaAcak = Random().nextInt(100);
+  print("Angka acak: $angkaAcak");
+}
+
+// Fungsi untuk menambah transaksi
+double tambahTransaksi(double jumlah) {
+  return jumlah;
+}
+
+// Fungsi untuk mengurangi transaksi
+double kurangiTransaksi(double jumlah) {
+  return jumlah;
+}
+
+// Fungsi untuk membagi angka dengan penanganan kesalahan
+int bagi(int a, int b) {
+  if (b == 0) {
+    throw UnsupportedError('Pembagian dengan nol tidak diperbolehkan');
+  }
+  return a ~/ b;
+}
